@@ -1,0 +1,61 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/GeistVariableVF.woff2") format('woff2');
+  font-display: fallback;
+}
+
+body {
+  font-family: 'Geist';
+
+}
+
+.button {
+  @apply inline-flex items-center justify-center rounded-md text-sm font-medium whitespace-nowrap;
+  @apply focus-visible:outline-none;
+  @apply disabled:pointer-events-none disabled:opacity-50 text-primary-700;
+  @apply h-10 px-4 py-2;
+}
+
+.button-p {
+  @apply bg-primary-900 text-primary-50 hover:bg-primary-900/90 
+}
+
+.button-des {
+  @apply bg-red-500 text-red-50 hover:bg-red-500/90
+}
+
+.button-o {
+  @apply border border-primary-700 bg-primary-100 hover:bg-primary-200 
+}
+
+.button-g {
+  @apply hover:bg-primary-100 hover:text-primary-700 
+}
+
+.button-sm {
+  @apply h-9 rounded-md px-3
+}
+
+.button-icon {
+  @apply h-10 w-10 p-0
+}
+
+
+
+.icon {
+  @apply h-4 w-4 mr-2
+}
+
+.input {
+  @apply flex h-10 w-full rounded-md border border-primary-300  px-3 py-2 text-sm font-normal file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-primary-300 focus-visible:outline-none focus-visible:ring-2  focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-primary-950
+}
+
+.textarea {
+  @apply flex min-h-[80px] w-full rounded-md border border-primary-300 bg-white px-3 py-2 text-sm ring-offset-primary-300 placeholder:text-primary-300 focus-visible:outline-none focus-visible:ring-2  focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50
+  
+}
